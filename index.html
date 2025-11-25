@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeShop</title>
+    <link rel="icon" type="image/x-icon" href="https://chatgpt.com/s/m_6925a9304e888191a6169c21440b0b73">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- For social media icons -->
+</head>
+<body>
+    <nav>
+        <div class="logo">CoffeeShop</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle">🌙</button>
+    </nav>
+
+    <section id="home" class="hero">
+        <div>
+            <h1>Welcome to CoffeeShop</h1>
+            <p>Brewed to perfection, one cup at a time. Experience the finest coffee in a cozy atmosphere.</p>
+            <button class="cta-button" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Explore Menu</button>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <h2>Our Menu</h2>
+        <div class="menu">
+            <div class="menu-item" data-coffee="espresso">
+                <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Rich and bold, the perfect start to your day.</p>
+                <p class="price">₹350/-</p>
+            </div>
+            <div class="menu-item" data-coffee="latte">
+                <img src="https://artizancoffee.com/cdn/shop/articles/flat_white_vs_caffe_latte_c9b0b508-76ec-46c7-b2c1-9d61c84c7732.jpg?v=1757602009&width=2048" alt="Latte">
+                <h3>Latte</h3>
+                <p>Creamy and smooth, with your choice of milk.</p>
+                <p class="price">₹400/-</p>
+            </div>
+            <div class="menu-item" data-coffee="cappuccino">
+                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Frothy and delicious, topped with cinnamon.</p>
+                <p class="price">₹750/-</p>
+            </div>
+            <div class="menu-item" data-coffee="mocha">
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mocha">
+                <h3>Mocha</h3>
+                <p>Chocolatey goodness in every sip.</p>
+                <p class="price">₹500/-</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section">
+        <h2>Pricing Plans</h2>
+        <div class="pricing">
+            <div class="pricing-item">
+                <h3>Basic Brew</h3>
+                <p class="price">₹1000/month</p>
+                <ul>
+                    <li>Unlimited coffee refills</li>
+                    <li>Wi-Fi access</li>
+                    <li>Cozy seating</li>
+                </ul>
+            </div>
+            <div class="pricing-item">
+                <h3>Premium Perk</h3>
+                <p class="price">₹2000/month</p>
+                <ul>
+                    <li>All Basic features</li>
+                    <li>Priority seating</li>
+                    <li>Exclusive events</li>
+                    <li>Free pastries</li>
+                </ul>
+            </div>
+            <div class="pricing-item">
+                <h3>VIP Brew</h3>
+                <p class="price">₹3000/month</p>
+                <ul>
+                    <li>All Premium features</li>
+                    <li>Personal barista</li>
+                    <li>Custom blends</li>
+                    <li>Private room access</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <div class="about">
+            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Coffee Shop Interior">
+            <div class="about-content">
+                <p>At CoffeeShop, we're passionate about serving the finest coffee beans sourced from around the world. Our cozy atmosphere is perfect for catching up with friends, getting some work done, or simply enjoying a moment of peace.</p>
+                <p>Founded by Ashim Seth in November 2025, we've grown from a small local spot to a beloved community hub. Our expert baristas craft each drink with care, ensuring every cup is a masterpiece.</p>
+                <div class="testimonials">
+                    <h3>What Our Customers Say</h3>
+                    <div class="testimonial">"The best coffee in town! The atmosphere is unbeatable." - Mr. Mona</div>
+                    <div class="testimonial">"Love the dark theme option – perfect for late-night coding sessions." - Mr. Seth</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="feedback" class="section">
+        <h2>Customer Feedback</h2>
+        <div class="feedback-form">
+            <h3>Share Your Thoughts</h3>
+            <form id="feedbackForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="">Select Rating</option>
+                    <option value="5">⭐⭐⭐⭐⭐ (5 Stars)</option>
+                    <option value="4">⭐⭐⭐⭐ (4 Stars)</option>
+                    <option value="3">⭐⭐⭐ (3 Stars)</option>
+                    <option value="2">⭐⭐ (2 Stars)</option>
+                    <option value="1">⭐ (1 Star)</option>
+                </select>
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" placeholder="Tell us about your experience..." required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <div class="contact">
+            <p>Email: <a href="mailto:ashimseth291@gmail.com">ashimseth291@gmail.com</a></p>
+            <p>Phone: <a href="tel:+916297589831">+91 6297589831</a></p>
+            <div class="social-media">
+                <a href="https://www.instagram.com/insta___wallah/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/ashim.seth.92" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@Ashim-o4g" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/asim-seth-02b15b289/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 CoffeeShop. All rights reserved.</p>
+        <p style="text-align: right;">This compleate page is an demo only. and it's designed by Ashim Seth</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
